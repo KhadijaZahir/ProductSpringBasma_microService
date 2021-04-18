@@ -1,16 +1,17 @@
 package ma.youcode.ProductSpringBasma.Security;
 
 import org.springframework.context.annotation.*;
-import org.springframework.security.authentication.dao.*;
-import org.springframework.security.config.annotation.authentication.builders.*;
-import org.springframework.security.config.annotation.web.builders.*;
-import org.springframework.security.config.annotation.web.configuration.*;
-import org.springframework.security.core.userdetails.*;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+//import org.springframework.security.authentication.dao.*;
+//import org.springframework.security.config.annotation.authentication.builders.*;
+//import org.springframework.security.config.annotation.web.builders.*;
+//import org.springframework.security.config.annotation.web.configuration.*;
+//import org.springframework.security.core.userdetails.*;
+//import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
-@Configuration
-@EnableWebSecurity
-public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
+//@Configuration
+//@EnableWebSecurity
+public class WebSecurityConfig{
+//public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
 //	@Bean
 //	public UserDetailsService userDetailsService() {

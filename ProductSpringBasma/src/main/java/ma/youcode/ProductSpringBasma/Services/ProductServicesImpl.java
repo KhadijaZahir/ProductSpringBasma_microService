@@ -3,6 +3,8 @@ package ma.youcode.ProductSpringBasma.Services;
 
 import java.util.List;
 
+import javax.transaction.Transactional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -10,15 +12,13 @@ import ma.youcode.ProductSpringBasma.Entities.ProductEntity;
 import ma.youcode.ProductSpringBasma.Repository.ProductRepository;
 
 @Service
+@Transactional
 public class ProductServicesImpl implements ProductServices{
 
 	 @Autowired
     private ProductRepository repo;
      
-    public List<ProductEntity> listAll() {
-//    	List<ProductEntity> produit = new ArrayList<ProductEntity>();  
-//    	repo.findAll().forEach(prdt -> produit.add(prdt));  
-//    	return produit;  
+    public List<ProductEntity> listAll() { 
         return repo.findAll();
     }
      

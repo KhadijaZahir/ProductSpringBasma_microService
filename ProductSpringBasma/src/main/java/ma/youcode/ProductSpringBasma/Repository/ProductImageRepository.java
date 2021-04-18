@@ -6,7 +6,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
-import ma.youcode.ProductSpringBasma.Entities.ProductEntity;
+import ma.youcode.ProductSpringBasma.Entities.ProductImageEntity;
 
 //CrudRepository :  mainly provides CRUD functions.
 //JpaRepository : provides some JPA-related methods such as flushing the persistence context and deleting records in a batch
@@ -17,11 +17,9 @@ import ma.youcode.ProductSpringBasma.Entities.ProductEntity;
 
 
 
-public interface ProductRepository extends JpaRepository<ProductEntity, Long>{
+public interface ProductImageRepository extends JpaRepository<ProductImageEntity, Long>{
 	
-	public ProductEntity findByName(String name);
-	
-	ProductEntity findByProductId(Long id);
-//	 @Query("SELECT u FROM ProductEntity u WHERE u.ProductId = :ProductId")
-//	    public ProductEntity findByProductId(@Param("ProductId") Long ProductId);
+	ProductImageEntity findByProductImgId(Long productImgId);
+//	 @Query("SELECT u FROM ProductImageEntity u WHERE u.productImgId = :productImgId")
+//	    public ProductImageEntity findByProductImgId(@Param("productImgId") Long productImgId);
 }

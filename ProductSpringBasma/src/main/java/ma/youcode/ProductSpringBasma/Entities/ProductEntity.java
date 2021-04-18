@@ -35,13 +35,13 @@ public class ProductEntity implements Serializable {
 //    private String image;
 
 	@NotNull
-	private String price;
+	private double price;
 //	JPA annotations
 //	@NotNull
 	@Column(nullable = false, length = 250)
 //	@Size(max = 250)
 	private String about;
-	
+	private String quantite;
 
 	// Constructor
 
@@ -49,6 +49,20 @@ public class ProductEntity implements Serializable {
 		super();
 		// TODO Auto-generated constructor stub
 	}
+	
+
+
+
+	public ProductEntity(String name, double price, String about, String quantite) {
+		super();
+		this.name = name;
+		this.price = price;
+		this.about = about;
+		this.quantite = quantite;
+	}
+
+
+
 
 	// Getters and Setters
 
@@ -68,11 +82,11 @@ public class ProductEntity implements Serializable {
 		this.name = name;
 	}
 
-	public String getPrice() {
+	public double getPrice() {
 		return price;
 	}
 
-	public void setPrice(String price) {
+	public void setPrice(double price) {
 		this.price = price;
 	}
 
@@ -82,6 +96,16 @@ public class ProductEntity implements Serializable {
 
 	public void setAbout(String about) {
 		this.about = about;
+	}
+
+
+	public String getQuantite() {
+		return quantite;
+	}
+
+
+	public void setQuantite(String quantite) {
+		this.quantite = quantite;
 	}
 
 //	public String getImage() {
@@ -99,11 +123,7 @@ public class ProductEntity implements Serializable {
 //	}
 //	
 	
-	@Override
-	public String toString() {
-		return "ProductEntity [productId=" + productId + ", name=" + name + ", price=" + price
-				+ ", about=" + about + "]";
-	}
+	
 	
 
 }
